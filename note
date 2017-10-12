@@ -22,13 +22,15 @@ cron.yaml:
 
 7. deploy
 > gcloud app deploy
+------------------------------ setup is done ---------------------
 
 8. check GAE logs
 > gcloud app logs tail -s default
 
+9. check on google cloud console, "App Engines" -> "Task queues" -> Right panel "Cron jobs"
 
-9. only deploy cron.yaml
+10. only deploy cron.yaml
 > gcloud app deploy cron.yaml
 
-10.get GAE repo again:
+11.get GAE repo again:
 gcloud source repos clone vm-start-stop-script --project=coral-mode-159015
