@@ -1,0 +1,34 @@
+1. create new project from google cloud console, choose python project
+
+2. git clone GAE repo to $SRC
+
+3. install:
+> pip install -t lib httplib2
+> pip install -t lib discovery
+> pip install -t lib/ google-api-python-client
+> pip install -t lib/ flask
+
+4. modify main.py and cron.yaml
+main.py:
+  INSTANCE_ZONE = 'asia-east1-a'
+  PROJECT = 'coral-mode-159015'
+cron.yaml:
+  confirm url(include instance/vm name)  and schedule
+
+5. cp main.py cron.yaml to $SRC
+
+6. test
+> dev_appserver.py app.yaml
+
+7. deploy
+> gcloud app deploy
+
+8. check GAE logs
+> gcloud app logs tail -s default
+
+
+9. only deploy cron.yaml
+> gcloud app deploy cron.yaml
+
+10.get GAE repo again:
+gcloud source repos clone vm-start-stop-script --project=coral-mode-159015
