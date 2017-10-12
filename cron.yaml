@@ -1,0 +1,9 @@
+cron:
+- description: daily start autotrade-tw-1a VM job
+  url: /vm/start/autotrade-tw-1a
+  schedule: every mon,tue,wed,thu,fri 8:15
+  timezone: Asia/Taipei
+- description: daily stop autotrade-tw-1a VM job
+  url: /vm/stop/autotrade-tw-1a
+  schedule: every mon,tue,wed,thu,fri 13:55 
+  timezone: Asia/Taipei
